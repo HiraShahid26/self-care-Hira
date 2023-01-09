@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    background: linear-gradient(#134d71, #78a7c6, #f7e4bf) no-repeat;
+}
+
+h1 {
+    margin: 30px 0;
+    color:white;
+    font-weight: 700;
+}
+p.text {
+    padding: 0;
+    margin: 0;
+}
+
+h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.choice {
+    background-color: white;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40vw;
+    border-radius: 10px;
+    max-height: 85px;
+    /* margin: auto; */
+    
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn1 {
+    align-self: center;
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 5px;
+    padding: 6px 0;
+    background-color: #134d71;
+    color: white;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    color: black;
+    background-color: gainsboro;
+}
+
+.btn2 {
+    display: none;
+}
+
+.btn2 {
+    align-self: center;
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 5px;
+    padding: 6px 0;
+    background-color: #134d71;
+    color: white;
+    cursor: pointer;
+}
+
+.photo {
+    padding: 50px 100px;
+    margin-top: 80px;
+    width: 60vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.img {
+    width: 50px;
+    margin: auto;
+}
+.hide {
+    display: none;
+}
+.text {
+    align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        height: 100vh;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo {
+        padding: 40px 80px;
+        margin-top: 0px;
+        width: 80vw;
+        border-radius: 10px;
+        display: flex;
+        background-color: white;
+    }
+
+    h4 {
+        
+        margin-top: 10px;
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .choice {
+        background-color: white;
+        padding: 25px 60px;
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        border-radius: 10px;
+        max-height: 800px;
+        margin-bottom: 140px;
+        margin-top: 50px;
+    }
+    
+    .btn1 {
+        align-self: center;
+        margin-top: 10px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 5px 0;
+        background-color: #134d71;
+        color: white;
+        cursor: pointer;
+    }
+
+    p.text {
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        font-weight: 400;
+    }
+}
