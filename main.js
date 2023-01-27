@@ -4,7 +4,7 @@ const choiceBox = document.querySelector(".choice")
 const imgLogo = document.querySelector(".img")
 const msgAppear = document.querySelector(".text")
 const selectElement = document.querySelectorAll("input[name='affirmation-mantras']");
-
+const inputs = document.querySelector(".test");
 
 
 
@@ -49,14 +49,18 @@ function random(array) {
     return Math.floor(Math.random() * array.length);
 }
 
+msgButton.disabled = true;
+
 function display() {
     for (let i=0; i<selectElement.length;i++){
         let selection = selectElement[i];
         if (selection.checked) {
+            // msgButton.disabled = false;
             return selection.value; 
         }
    } 
 }
+
 
 
 msgButton.addEventListener("click", function (e){
@@ -65,15 +69,33 @@ msgButton.addEventListener("click", function (e){
     delButton.style.display = "block ";
     msgAppear.classList.remove("hide");
     imgLogo.classList.add("hide");
+
+
+    // if (selectElement == false){
+    //     msgButton.disabled == true;
+    //     msgAppear.innerHTML = "<<Please select button>>";
+    // }
     
 
     if(display() === "affirmation"){
         msgAppear.innerHTML = `${affirmation[random(affirmation)]}`;
+
     }
-    else  {
+    else if (display() !== "affirmation")  {
         msgAppear.innerHTML = `${mantras[random(mantras)]}`;
     }
+    // else {
+    //     msgButton.disabled = true;
+    //     // msgAppear.innerHTML = "<<Please select button>>";
+    // }
 
+})
+
+inputs.addEventListener("click",(e) => {
+    const value = e.target.value;
+    if(value === "affirmation"){
+        msgButton.disabled = false;
+    }
 })
 
 
